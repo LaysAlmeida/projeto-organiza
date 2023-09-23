@@ -1,8 +1,31 @@
+import Image from "next/image"
 
 const Home = () => {
   return (
-    <div>
-      <h1>Página Principal</h1>
+    <div className="flex-auto p-6" id="screen">
+      <Image src="/icon.png" width={400} height={400} />
+      <h1 className="container">Organiza</h1>
+      <style jsx global>{`
+        body {
+          margin: 0;
+          padding: 0;
+          font-size: 200%;
+          font-weight: 50%;
+          line-height: 1.8;
+        }
+        h1 {
+          font-weight: 700;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+
+        #screen{
+          background-color:#347deb
+        }
+      `}</style>
+
+
     </div>
   )
 }
