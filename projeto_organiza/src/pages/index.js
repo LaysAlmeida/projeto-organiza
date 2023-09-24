@@ -3,21 +3,16 @@ import Image from "next/image"
 const Home = () => {
   return (
     <div className="flex" id="screen">
-      
-      <Image src="/icon.png" width={400} height={400} />
-        <div className="flex-row-reverse">
-          <h1 className="relative -bottom-0">Organiza</h1>
-        </div>
+
+      <Image src="/icon.png" width={400} height={0} />
+      <div className="flex-row-reverse">
+        <h1 className="relative -bottom-0">Organiza</h1>
+      </div>
 
 
-        <form>
-          <div className="columns-10">
-            <label>Entrar</label>
-            <input></input>
-            <input></input>
-          </div>
-        </form>
+      <form>
 
+      </form>
 
       <style jsx global>{`
         body {
@@ -36,7 +31,8 @@ const Home = () => {
 
         #screen{
           background-color:#004E92;
-          height:100%;
+          height:100vh;
+          width:100vw;
         }
       `}</style>
 
