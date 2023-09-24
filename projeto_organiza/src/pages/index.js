@@ -1,5 +1,6 @@
 import Image from "next/image"
 import React, {useState, useEffect} from 'react'
+import axios from "axios"
 
 export const getStaticProps = async () => {
 
@@ -8,13 +9,13 @@ export const getStaticProps = async () => {
   
       return {
         props: {
-          alunos: data,
+          cadastros: data,
         }
       }
   }
 
 
-const Home = () => {
+const Home = props => {
     const [cpf, setCpf] = useState('')
     const [senha, setSenha] = useState('')
     const [alerta, setAlerta] = useState('')
@@ -22,7 +23,14 @@ const Home = () => {
     const getUser = (e) => {
         e.preventDefault();
         if(cpf.length != 11 || senha == ''){
-            setAlerta("CPF ou senha inválidos")
+            setAlerta("CPF e/ou senha inválidos")
+        }else{
+            var usuario = props.cadastros.filter(cadastro => cadastro.cpf==cpf)[0]
+            if(usuario.senha == senha){
+                console.log(true)
+            }else{
+                setAlerta("CPF e/ou senha inválidos")
+            }
         }
     }
 
@@ -52,7 +60,7 @@ const Home = () => {
                         </p>
                     </form>
                     <div className="flex justify-center">
-                         <h1 className="w-full bg-red-600 text-white rounded-lg text-center md:w-1/2 sm:w-full">{alerta}</h1>
+                         <h1 className="w-full bg-red-600 text-white rounded-lg text-center sm:w-1/2 md:w-1/2">{alerta}</h1>
                     </div>
                 </div>
             </div>
