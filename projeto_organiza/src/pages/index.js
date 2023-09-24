@@ -3,16 +3,16 @@ import Image from "next/image"
 
 const Home = () => {
   return (
-    <div className="flex" id="screen">
+    <div className="flex bg-blue-800" id="screen">
       
       <Image src="/icon.png" width={400} height={400} />
-        <div className="flex-row-reverse">
+        <div>
           <h1 className="relative -bottom-0">Organiza</h1>
         </div>
 
 
-        <form className="col">
-          <h2>Entrar</h2>
+        <form className="">
+          <h2 >Entrar</h2>
           <div className="columns-3">
             <input></input>
             <input></input>
