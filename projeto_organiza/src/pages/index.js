@@ -11,7 +11,6 @@ const Home = () => {
       </div>
 
       <HEAD>
-
         <form className="col">
           <h2>Entrar</h2>
           <div className="columns-3">
@@ -20,11 +19,8 @@ const Home = () => {
           </div>
           <button type="submit">Submit</button>
         </form>
-
-        <form>
-
-        </form>
       </HEAD>
+
       <style jsx global>{`
         body {
           margin: 0;
