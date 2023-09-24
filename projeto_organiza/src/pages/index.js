@@ -2,16 +2,21 @@ import Image from "next/image"
 
 const Home = () => {
   return (
-    <div className="flex-auto p-6" id="screen">
+    <div className="flex" id="screen">
       
       <Image src="/icon.png" width={400} height={400} />
-      <div className="flex-row-reverse">
-      <h1>Organiza</h1>
-      </div>
+        <div className="flex-row-reverse">
+          <h1 className="relative -bottom-0">Organiza</h1>
+        </div>
 
-      <form>
 
-      </form>
+        <form>
+          <div className="columns-4">
+            <h2>Entrar</h2>
+            <input></input>
+            <input></input>
+          </div>
+        </form>
       <style jsx global>{`
         body {
           margin: 0;
@@ -29,7 +34,7 @@ const Home = () => {
 
         #screen{
           background-color:#347deb;
-          height:100%
+          height:100%;
         }
       `}</style>
 
