@@ -10,16 +10,14 @@ const Home = () => {
         <h1 className="relative -bottom-0">Organiza</h1>
       </div>
 
-      <HEAD>
+  
         <form className="col">
-          <h2>Entrar</h2>
-          <div className="columns-3">
-            <input></input>
-            <input></input>
+          <div className="form-itens">
+                <h2>Entrar</h2>
+                <input type="text" id="cpf" name="cpf"></input>
+                <label for="cpf">CPF</label>
           </div>
-          <button type="submit">Submit</button>
         </form>
-      </HEAD>
 
       <style jsx global>{`
         body {
