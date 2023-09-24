@@ -4,11 +4,11 @@ import Image from "next/image"
 const Home = () => {
   return (
     <div className="flex" id="screen">
-
-      <Image src="/icon.png" width={400} height={0} />
-      <div className="flex-row-reverse">
-        <h1 className="relative -bottom-0">Organiza</h1>
-      </div>
+      
+      <Image src="/icon.png" width={400} height={400} />
+        <div className="flex-row-reverse">
+          <h1 className="relative -bottom-0">Organiza</h1>
+        </div>
 
   
         <form className="col">
@@ -16,6 +16,7 @@ const Home = () => {
                 <h2>Entrar</h2>
                 <input type="text" id="cpf" name="cpf"></input>
                 <label for="cpf">CPF</label>
+
           </div>
         </form>
 
@@ -40,9 +41,9 @@ const Home = () => {
           width:100vw;
         }
       `}</style>
-
-    </div>
+   </div>
   )
+  
 }
 
 export default Home
