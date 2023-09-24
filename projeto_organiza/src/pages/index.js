@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+
 const Home = () => {
   return (
     <div className="flex" id="screen">
@@ -9,11 +10,23 @@ const Home = () => {
         <h1 className="relative -bottom-0">Organiza</h1>
       </div>
 
+<<<<<<< HEAD
+=======
+        <form className="col">
+          <h2>Entrar</h2>
+          <div className="columns-3">
+            <input></input>
+            <input></input>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+>>>>>>> f136ed0b255551a3cea258032d928ed934903136
 
       <form>
 
       </form>
 
+<<<<<<< HEAD
       <style jsx global>{`
         body {
           margin: 0;
@@ -37,6 +50,8 @@ const Home = () => {
       `}</style>
 
 
+=======
+>>>>>>> f136ed0b255551a3cea258032d928ed934903136
     </div>
   )
 }
