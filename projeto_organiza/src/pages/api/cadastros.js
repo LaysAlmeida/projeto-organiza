@@ -1,5 +1,5 @@
 
-const cadastros = [
+var cadastros = [
     {
       nome: 'João Silva',
       senha: '1234',
@@ -21,5 +21,11 @@ const cadastros = [
   ];
   
   export default function handler(req, res) {
-    res.status(200).json(cadastros);
+    if(req.method == 'POST'){
+        var info = req.body
+        cadastros.push(info);
+        res.status(200).json(info);
+    }else if(req.method == 'GET'){
+        res.status(200).json(cadastros);
+    }
   }
