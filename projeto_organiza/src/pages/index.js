@@ -1,5 +1,6 @@
 import Image from "next/image"
 import React, {useState, useEffect} from 'react'
+import Router from "next/router"
 import axios from "axios"
 
 export const getStaticProps = async () => {
@@ -28,6 +29,7 @@ const Home = props => {
             var usuario = props.cadastros.filter(cadastro => cadastro.cpf==cpf)[0]
             if(usuario.senha == senha){
                 console.log(true)
+                Router.push('/homepage')
             }else{
                 setAlerta("CPF e/ou senha inválidos")
             }
@@ -56,7 +58,7 @@ const Home = props => {
 
                         <button type="submit" onClick={(e) => getUser(e)} class=" w-full text-white bg-primary-600 ring-2 ring-white hover:bg-blue-700 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Entrar</button>
                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                            <a href="#" class="font-medium text-white hover:underline dark:text-blue-500">Abrir conta</a>
+                            <a href="/cadastropage" class="font-medium text-white hover:underline dark:text-blue-500">Abrir conta</a>
                         </p>
                     </form>
                     <div className="flex justify-center">
