@@ -10,8 +10,8 @@ const Home = () => {
         <h1 className="relative -bottom-0">Organiza</h1>
       </div>
 
-<<<<<<< HEAD
-=======
+      <HEAD>
+
         <form className="col">
           <h2>Entrar</h2>
           <div className="columns-3">
@@ -20,13 +20,11 @@ const Home = () => {
           </div>
           <button type="submit">Submit</button>
         </form>
->>>>>>> f136ed0b255551a3cea258032d928ed934903136
 
-      <form>
+        <form>
 
-      </form>
-
-<<<<<<< HEAD
+        </form>
+      </HEAD>
       <style jsx global>{`
         body {
           margin: 0;
@@ -49,9 +47,6 @@ const Home = () => {
         }
       `}</style>
 
-
-=======
->>>>>>> f136ed0b255551a3cea258032d928ed934903136
     </div>
   )
 }
