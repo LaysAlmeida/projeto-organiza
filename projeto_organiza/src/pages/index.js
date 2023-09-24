@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+
 const Home = () => {
   return (
     <div className="flex" id="screen">
@@ -10,35 +11,14 @@ const Home = () => {
         </div>
 
 
-        <form>
-          <div className="columns-10">
-            <label>Entrar</label>
+        <form className="col">
+          <h2>Entrar</h2>
+          <div className="columns-3">
             <input></input>
             <input></input>
           </div>
+          <button type="submit">Submit</button>
         </form>
-
-
-      <style jsx global>{`
-        body {
-          margin: 0;
-          padding: 0;
-          font-size: 200%;
-          font-weight: 50%;
-          line-height: 1.8;
-        }
-        h1 {
-          font-weight: 700;
-        }
-        p {
-          margin-bottom: 10px;
-        }
-
-        #screen{
-          background-color:#004E92;
-          height:100%;
-        }
-      `}</style>
 
 
     </div>
