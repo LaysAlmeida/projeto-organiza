@@ -1,5 +1,5 @@
 
-export const cadastros = [
+const cadastros = [
     {
       nome: 'João Silva',
       senha: '1234',
@@ -20,4 +20,6 @@ export const cadastros = [
     },
   ];
   
-  
+  export default function handler(req, res) {
+    res.status(200).json(cadastros);
+  }
