@@ -3,8 +3,15 @@ import Image from "next/image"
 const Home = () => {
   return (
     <div className="flex-auto p-6" id="screen">
+      
       <Image src="/icon.png" width={400} height={400} />
-      <h1 className="container">Organiza</h1>
+      <div className="flex-row-reverse">
+      <h1>Organiza</h1>
+      </div>
+
+      <form>
+
+      </form>
       <style jsx global>{`
         body {
           margin: 0;
@@ -21,7 +28,8 @@ const Home = () => {
         }
 
         #screen{
-          background-color:#347deb
+          background-color:#347deb;
+          height:100%
         }
       `}</style>
 
