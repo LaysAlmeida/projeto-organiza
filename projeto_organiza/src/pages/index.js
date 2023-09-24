@@ -11,12 +11,14 @@ const Home = () => {
 
 
         <form>
-          <div className="columns-4">
-            <h2>Entrar</h2>
+          <div className="columns-10">
+            <label>Entrar</label>
             <input></input>
             <input></input>
           </div>
         </form>
+
+
       <style jsx global>{`
         body {
           margin: 0;
@@ -33,7 +35,7 @@ const Home = () => {
         }
 
         #screen{
-          background-color:#347deb;
+          background-color:#004E92;
           height:100%;
         }
       `}</style>
