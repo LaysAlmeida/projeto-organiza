@@ -1,3 +1,6 @@
+
+
+
 const cadastropage = () =>{
     return(
         <section class="bg-blue-800 dark:bg-gray-900 h-screen">
