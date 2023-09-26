@@ -1,7 +1,5 @@
-import Image from "next/image"
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Router from "next/router"
-import axios from "axios"
 
 export const getStaticProps = async () => {
 
