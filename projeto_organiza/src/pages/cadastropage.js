@@ -1,5 +1,6 @@
-
+import SalvarService from './services/salvarService'
 import React, {useState} from 'react'
+import Router from "next/router"
 
 export const getStaticProps = async () => {
 
@@ -20,7 +21,7 @@ const cadastropage = props =>{
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [email2, setEmail2] = useState('')
-    const [date, setDate] = useState('')
+    const [data, setData] = useState('')
     const [senha2, setSenha2] = useState('')
     
     const [alerta, setAlerta] = useState('')
@@ -29,15 +30,19 @@ const cadastropage = props =>{
 
     const saveCadastro = (e) => {
         e.preventDefault();
-        if(senha==senha2 && email==email2){
+        if(senha==senha2 && email==email2 && cpf.length == 11 && senha != ''){
             var validarCpf = props.cadastros.filter(cadastro => cadastro.cpf==cpf).length
             var validarEmail = props.cadastros.filter(cadastro => cadastro.email==email).length
+            
            if(validarCpf == 0 && validarEmail == 0){
-            const usuario = {cpf,senha,nome,email,date}
+            var entradas = [];
+            var saidas = [];
+            var saldo = 0;
+            const usuario = {cpf,senha,nome,email,data,entradas,saidas,saldo}
 
             SalvarService.createUsuario(usuario).then((response) =>{
                 console.log(response.data)
-                history('/');
+                Router.push('/')
             }).catch(error => {
                 console.log(error)
                 setAlerta("Algo deu errado")
@@ -45,7 +50,11 @@ const cadastropage = props =>{
            }else{
                 setAlerta("Já existe cadastro com CPF e/ou e-mail registrado")
            }
-        } else {
+        }else if(senha == ''){
+            setAlerta("É necessário uma senha")
+        }else if(cpf.length != 11){
+            setAlerta("É necessário um CPF válido")
+        }else {
             setAlerta("E-mails e/ou senhas não correspondem")
         }
         
@@ -74,7 +83,7 @@ const cadastropage = props =>{
                             <input type="email" name="email2" id="email2" value={email2} onChange={(e) => setEmail2(e.target.value)} class="bg-gray-50 border border-gray-300 text-black sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Confirme seu e-mail" required=""/>
                         </div>
                         <div className="flex justify-between space-x-2">
-                            <input type="date" name="data" id="data" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Date" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                            <input type="date" name="data" id="data" value={data} onChange={(e) => setData(e.target.value)} placeholder="Date" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
                             <input type="cpf" name="cpf" id="cpf" value={cpf} onChange={(e) => setCpf(e.target.value)} placeholder="CPF" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
                         </div>
                         <div className="flex justify-between space-x-2">

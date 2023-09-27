@@ -4,6 +4,7 @@ var cadastros = [
       nome: 'João Silva',
       senha: '1234',
       cpf:'00000000000',
+      data:'24/12/2000',
       saldo: 5000,
       email:'example@com',
       entradas: [{valor:5600,data:'20/10/2022'}],
@@ -12,6 +13,7 @@ var cadastros = [
     {
       nome: 'Maria Santos',
       senha: '5321',
+      data:'24/10/2000',
       cpf:'00000000002',
       saldo: 400,
       email:'example2@com',
