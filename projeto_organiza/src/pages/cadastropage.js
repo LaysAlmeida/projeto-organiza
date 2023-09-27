@@ -1,4 +1,4 @@
-import SalvarService from './services/SalvarService'
+import SalvarService from './services/salvarService'
 import React, {useState} from 'react'
 import Router from "next/router"
 
