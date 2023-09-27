@@ -1,8 +1,8 @@
+
 import { useRouter } from "next/router"
 
-export const getStaticProps = async () => {
-    const { query } = useRouter();
-    const res = await fetch('http://localhost:3000/api/cadastros?cpf='+query.cpf)
+export const getStaticProps = async (context) => {
+    const res = await fetch('http://localhost:3000/api/cadastros?cpf='+context.params.cpf)
     const data = await res.json()
   
       return {
@@ -13,10 +13,11 @@ export const getStaticProps = async () => {
   }
 
 const homepage = props =>{
+
+
     return(
         <div>
             homepage
-            {props.cadastros.nome}
         </div>
     )
 }
