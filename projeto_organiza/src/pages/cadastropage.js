@@ -1,8 +1,20 @@
 
 import React, {useState} from 'react'
 
+export const getStaticProps = async () => {
 
-const cadastropage = () =>{
+    const res = await fetch('http://localhost:3000/api/cadastros')
+    const data = await res.json()
+  
+      return {
+        props: {
+          cadastros: data,
+        }
+      }
+  }
+
+
+const cadastropage = props =>{
     const [cpf, setCpf] = useState('')
     const [senha, setSenha] = useState('')
     const [nome, setNome] = useState('')
@@ -10,22 +22,32 @@ const cadastropage = () =>{
     const [email2, setEmail2] = useState('')
     const [date, setDate] = useState('')
     const [senha2, setSenha2] = useState('')
+    
+    const [alerta, setAlerta] = useState('')
+
+    
 
     const saveCadastro = (e) => {
         e.preventDefault();
         if(senha==senha2 && email==email2){
+            var validarCpf = props.cadastros.filter(cadastro => cadastro.cpf==cpf).length
+            var validarEmail = props.cadastros.filter(cadastro => cadastro.email==email).length
+           if(validarCpf == 0 && validarEmail == 0){
             const usuario = {cpf,senha,nome,email,date}
 
-            EmpregadoService.createEmpregados(empregado).then((response) =>{
-
+            SalvarService.createUsuario(usuario).then((response) =>{
                 console.log(response.data)
-    
                 history('/');
-    
             }).catch(error => {
                 console.log(error)
+                setAlerta("Algo deu errado")
             })
-        } 
+           }else{
+                setAlerta("Já existe cadastro com CPF e/ou e-mail registrado")
+           }
+        } else {
+            setAlerta("E-mails e/ou senhas não correspondem")
+        }
         
     }
 
@@ -64,7 +86,7 @@ const cadastropage = () =>{
                         </div>
                     </form>
                     <div className="flex justify-center">
-                         <h1 className="w-full bg-red-600 text-white rounded-lg text-center sm:w-1/2 md:w-1/2"></h1>
+                         <h1 className="w-full bg-red-600 text-white rounded-lg text-center sm:w-1/2 md:w-1/2">{alerta}</h1>
                     </div>
                 </div>
             </div>
