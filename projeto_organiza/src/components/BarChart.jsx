@@ -27,6 +27,7 @@ const BarChart = () => {
 
   const [chartOptions, setChartOptions] = useState({});
 
+<<<<<<< HEAD
   useEffect(() => {
     setChartData({
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -70,6 +71,64 @@ const BarChart = () => {
       },
     })
   }, [])
+=======
+    useEffect(() => {
+        setChartData({
+            labels: ['Despesas', 'Metas', 'Saldo Atual', 'Receitas'],
+            datasets: [
+                {
+                    data: [6, 6, 8, 12],
+                    borderColor: [
+                        'rgba(43, 135, 227, 1)',
+                        'rgba(87, 208, 122, 1)',
+                        'rgba(159, 67, 204, 1)',
+                        'rgba(235, 161, 15, 1)',
+                    ],
+                    backgroundColor: [
+                        'rgba(43, 135, 227, 1)',
+                        'rgba(87, 208, 122, 1)',
+                        'rgba(159, 67, 204, 1)',
+                        'rgba(235, 161, 15, 1)',
+                    ],
+                    color: [
+                        'rgba(255, 255, 255, 1)'
+                    ]
+                },
+            ],
+        })
+        setChartOptions({
+            plugins: {
+                legend: {
+                    position: 'top',
+                labels: {
+                    color: "white",
+                },
+                
+
+                title: {
+                    display: true,
+                    text: 'Seu Patrimônio',
+                    color: 'rgba(255, 255, 255, 1)'
+                },
+                maintainAspectRatio: false,
+                responsive: true
+            }
+        }
+         }
+         )
+    },
+    
+    [])
+    return (
+        <>
+            <div className=" flex flex-row w-3/12 md:col-span-2 relative lg:h-[40vh] sm:h-[30vh] a-auto p-4" >
+                <Doughnut data={chartData} options={chartOptions} plugins={[plugins]}
+                 />
+            </div>
+        </>
+    )
+}
+>>>>>>> 4790ca8457b55af8f67a607f2211b8ad53325105
 
   return (
     <>
