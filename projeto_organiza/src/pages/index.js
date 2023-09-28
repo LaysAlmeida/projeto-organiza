@@ -27,7 +27,7 @@ const Home = props => {
             var usuario = props.cadastros.filter(cadastro => cadastro.cpf==cpf)[0]
             if(usuario.senha == senha){
                 console.log(true)
-                Router.push('/homepage')
+                Router.push('/homepage?cpf='+cpf)
             }else{
                 setAlerta("CPF e/ou senha inválidos")
             }
