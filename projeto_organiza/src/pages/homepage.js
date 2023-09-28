@@ -34,7 +34,7 @@ export default function homepage(props) {
     return (
         <div >
           <Navbar/>
-          <div className="h-screen bg-blue-800 text-white justify-center">
+          <div className="h-screen bg-blue-800 text-white items-center justify-center">
             <h1>Olá {cadastro.nome}, seja bem vinda ao Organiza!</h1>
             <h2>Saldo: R${cadastro.saldo},00</h2>
           </div>
