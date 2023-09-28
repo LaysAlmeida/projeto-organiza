@@ -41,8 +41,8 @@ export default function homepage(props) {
           <h3 className="text-5xl">R${cadastro.saldo},00</h3>
         </div>
         <BarChart />
-        <div className="flex p-4 items-center flex-row justify-center">
-          <div className="lg:col-span-2 col-span-1 bg-white flex w-full border p-4 rounded-lg ">
+        <div className="flex p-4 items-center flex-row justify-center ml-20">
+          <div className="lg:col-span-2 col-span-1 bg-white flex w-full border p-4 rounded-lg self-start">
             <div className="flex flex-col w-full pb-4">
               <p className="text-gray-600">Patrimônio</p>
               <p className="text-2xl font-bold">{cadastro.patrimonio}</p>

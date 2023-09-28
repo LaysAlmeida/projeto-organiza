@@ -17,7 +17,6 @@ const BarChart = () => {
             labels: ['Despesas', 'Metas', 'Saldo Atual', 'Receitas'],
             datasets: [
                 {
-                    label: '# of Votes',
                     data: [6, 6, 8, 12],
                     borderColor: [
                         'rgba(43, 135, 227, 1)',
@@ -45,6 +44,7 @@ const BarChart = () => {
                     color: "white",
                 },
                 
+
                 title: {
                     display: true,
                     text: 'Seu Patrimônio',
@@ -61,7 +61,7 @@ const BarChart = () => {
     [])
     return (
         <>
-            <div className=" flex flex-row w-3/12 md:col-span-2 relative lg:h-[40vh] h-[60vh] a-auto p-4" >
+            <div className=" flex flex-row w-3/12 md:col-span-2 relative lg:h-[40vh] sm:h-[30vh] a-auto p-4" >
                 <Doughnut data={chartData} options={chartOptions} plugins={[plugins]}
                  />
             </div>
