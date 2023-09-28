@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="fixed w-full h-24 shadow-xl bg-white">
+        <nav className="fixed w-full h-24 shadow-xl bg-blue-navbar">
             <div className="flex justify-between items-center h-full w-full px-4 2x1:px-16 text-black">
                 <Link href='/'>
                     <Image
