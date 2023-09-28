@@ -7,9 +7,15 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'blue-navbar': '#2065A1'
+      'blue-navbar': '#2065A1',
+      'main': '#004E92'
     }
     ,
+    fontFamily: {
+      'mukta': ['Mukta', 'sans-serif'],
+      'poppins': ['Poppins', 'sans-serif']
+    },
+
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
