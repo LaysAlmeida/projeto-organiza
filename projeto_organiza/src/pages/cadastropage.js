@@ -1,4 +1,4 @@
-import SalvarService from './services/salvarService'
+import UsuarioService from './services/UsuarioService'
 import React, {useState} from 'react'
 import Router from "next/router"
 
@@ -40,7 +40,7 @@ const cadastropage = props =>{
             var saldo = 0;
             const usuario = {cpf,senha,nome,email,data,entradas,saidas,saldo}
 
-            SalvarService.createUsuario(usuario).then((response) =>{
+            UsuarioService.createUsuario(usuario).then((response) =>{
                 console.log(response.data)
                 Router.push('/')
             }).catch(error => {
