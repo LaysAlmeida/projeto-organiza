@@ -26,16 +26,16 @@ const Navbar = () => {
                         priority
                     />
                 </Link>
-                <div className="hidden sm:flex">
+                <div className="hidden sm:flex ">
                     <ul className="hidden sm:flex">
                         <Link href='/'>
-                            <li className="ml-10 uppercase hover:border-b text-xl">Home</li>
+                            <li className="ml-10 uppercase hover:border-b text-lg">Home</li>
                         </Link>
                         <Link href='/despesas'>
-                            <li className="ml-10 uppercase hover:border-b text-xl">Despesas</li>
+                            <li className="ml-10 uppercase hover:border-b text-lg">Despesas</li>
                         </Link>
                         <Link href='/configuracao'>
-                            <li className="ml-10 uppercase hover:border-b text-xl">Configuração</li>
+                            <li className="ml-10 uppercase hover:border-b text-lg">Configuração</li>
                         </Link>
                     </ul>
                 </div>

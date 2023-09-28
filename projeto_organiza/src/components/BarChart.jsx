@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import { plugins } from "../../postcss.config";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
@@ -13,28 +14,26 @@ const BarChart = () => {
 
     useEffect(() => {
         setChartData({
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['Despesas', 'Metas', 'Saldo Atual', 'Receitas'],
             datasets: [
                 {
                     label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [6, 6, 8, 12],
                     borderColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(43, 135, 227, 1)',
+                        'rgba(87, 208, 122, 1)',
+                        'rgba(159, 67, 204, 1)',
+                        'rgba(235, 161, 15, 1)',
                     ],
-                    borderWidth: 1,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(43, 135, 227, 1)',
+                        'rgba(87, 208, 122, 1)',
+                        'rgba(159, 67, 204, 1)',
+                        'rgba(235, 161, 15, 1)',
                     ],
+                    color: [
+                        'rgba(255, 255, 255, 1)'
+                    ]
                 },
             ],
         })
@@ -42,21 +41,29 @@ const BarChart = () => {
             plugins: {
                 legend: {
                     position: 'top',
+                labels: {
+                    color: "white",
                 },
+                
                 title: {
                     display: true,
-                    text: 'Seu Patrimônio'
+                    text: 'Seu Patrimônio',
+                    color: 'rgba(255, 255, 255, 1)'
                 },
                 maintainAspectRatio: false,
                 responsive: true
             }
-        })
-    }, [])
-
+        }
+         }
+         )
+    },
+    
+    [])
     return (
         <>
-            <div className="w-full md:col-span-2 relative lg:h-[70vh] h-[60vh] a-auto p-4 border rounded-lg bg-white" >
-                <Doughnut data={chartData} options={chartOptions} />
+            <div className=" flex flex-row w-3/12 md:col-span-2 relative lg:h-[40vh] h-[60vh] a-auto p-4" >
+                <Doughnut data={chartData} options={chartOptions} plugins={[plugins]}
+                 />
             </div>
         </>
     )

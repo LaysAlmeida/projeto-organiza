@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'blue-navbar': '#2065A1'
+      'blue-navbar': '#2065A1',
+      'main': '#004E92'
     }
     ,
     fontFamily: {
