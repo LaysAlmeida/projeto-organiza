@@ -1,4 +1,3 @@
-
 var cadastros = [
     {
       nome: 'João Silva',
