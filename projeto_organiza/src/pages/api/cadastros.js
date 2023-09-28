@@ -8,7 +8,7 @@ var cadastros = [
       email:'example@com',
       entradas: [{valor:5600,data:'20/10/2022'}],
       saidas: [{categoria:'farmácia',valor:500,data:'21/10/2022'},{categoria:'shopping',valor:100,data:'22/10/2022'}],
-      patrimonio: '12.000',
+      patrimonio: 'R$20.000',
       genero: 'm'
     },
     {
@@ -20,7 +20,7 @@ var cadastros = [
       email:'example2@com',
       entradas: [{valor:1000,data:'20/10/2022'}],
       saidas: [{categoria:'farmácia',valor:500,data:'22/10/2022'},{categoria:'shopping',valor:100,data:'22/10/2022'}],
-      patrimonio: '12.000',
+      patrimonio: 'R$12.000',
       genero: 'f'
     },
   ];

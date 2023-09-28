@@ -34,21 +34,20 @@ export default function homepage(props) {
   return (
     <div className="bg-main">
       <Navbar />
-      <div className="flex flex-col h-screen bg-gradient-to-t from-blue-950 to-blue-600 text-white items-start justify-start font-mukta gap-14 mt-12 ml-12">
+      <div className="flex flex-col h-screen bg-gradient-to-t from-blue-950 to-blue-600 text-white items-start justify-center font-mukta gap-14 mt-12 ml-12">
         <h1 className="text-5xl"> Olá {cadastro.nome}!</h1>
         <div>
           <h2 className="text-base font-medium">Saldo atual:</h2>
-          <h3 className="text-6xl">R${cadastro.saldo},00</h3>
+          <h3 className="text-5xl">R${cadastro.saldo},00</h3>
         </div>
-        <BarChart
-         ></BarChart>
-         <div className="flex flex-col p-4">
-            <div className="lg:col-span-2 col-span-1 bg-white flex w-full border p-4 rounded-lg">
-                <div className="flex flex-col w-full pb-4">
-                    <p className="text-gray-600">Patrimônio</p>
-                    <p className="text-2xl font-bold">$7,846</p>
-                </div>
+        <BarChart />
+        <div className="flex p-4 items-center flex-row justify-center">
+          <div className="lg:col-span-2 col-span-1 bg-white flex w-full border p-4 rounded-lg ">
+            <div className="flex flex-col w-full pb-4">
+              <p className="text-gray-600">Patrimônio</p>
+              <p className="text-2xl font-bold">{cadastro.patrimonio}</p>
             </div>
+          </div>
         </div>
       </div>
     </div>
