@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <nav className="static w-full h-24 shadow-xl bg-blue-navbar font-poppins">
             <div className="flex justify-between items-center h-full w-full px-4 2x1:px-16 text-black">
-                <Link href='/'>
+                <Link href='/homepage'>
                     <Image
                         src={Logo}
                         alt='Logo'
@@ -34,7 +34,7 @@ const Navbar = () => {
                         <Link href='/despesas'>
                             <li className="ml-10 uppercase hover:border-b text-lg">Despesas</li>
                         </Link>
-                        <Link href='/configuracao'>
+                        <Link href='/settings'>
                             <li className="ml-10 uppercase hover:border-b text-lg">Configuração</li>
                         </Link>
                     </ul>
@@ -56,7 +56,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex-col py-4 text-black">
                     <ul>
-                        <Link href='/'>
+                        <Link href='/homepage'>
                             <li
                                 onClick={() => setMenuOpen(false)}
                                 className="py-4 cursor-pointer"

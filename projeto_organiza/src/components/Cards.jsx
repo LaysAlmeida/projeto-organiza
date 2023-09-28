@@ -9,6 +9,14 @@ const Cards = () => {
                     <p className="text-2xl font-bold">$7,846</p>
                     <p className="text-gray-600">Daily Revenue</p>
                 </div>
+                <div className="flex flex-col w-full pb-4">
+                    <p className="text-2xl font-bold">$7,846</p>
+                    <p className="text-gray-600">Daily Revenue</p>
+                </div>
+                <div className="flex flex-col w-full pb-4">
+                    <p className="text-2xl font-bold">$7,846</p>
+                    <p className="text-gray-600">Daily Revenue</p>
+                </div>
             </div>
         </div>
     )
