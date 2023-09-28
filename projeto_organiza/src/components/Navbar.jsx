@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="static w-full h-24 shadow-xl bg-blue-navbar">
+        <nav className="static w-full h-24 shadow-xl bg-blue-navbar font-poppins">
             <div className="flex justify-between items-center h-full w-full px-4 2x1:px-16 text-black">
                 <Link href='/'>
                     <Image

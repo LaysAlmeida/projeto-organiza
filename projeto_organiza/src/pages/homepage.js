@@ -34,7 +34,7 @@ export default function homepage(props) {
   return (
     <div >
       <Navbar />
-      <div className="flex flex-col h-screen bg-gradient-to-t from-blue-950 to-blue-600 text-white items-center justify-center">
+      <div className="flex flex-col h-screen bg-gradient-to-t from-blue-950 to-blue-600 text-white items-center justify-center font-mukta">
         <h1 className="">Olá {cadastro.nome}, seja bem vinda ao Organiza!</h1>
         <h2>Saldo: R${cadastro.saldo},00</h2>
         <Cards />
