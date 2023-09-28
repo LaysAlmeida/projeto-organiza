@@ -34,6 +34,7 @@ export default function homepage(props) {
   return (
     <div className="bg-main">
       <Navbar />
+      <Cards />
       <div className="flex flex-col h-screen bg-gradient-to-t from-blue-950 to-blue-600 text-white items-start justify-center font-mukta gap-14 mt-12 ml-12">
         <h1 className="text-5xl"> Olá {cadastro.nome}!</h1>
         <div>
@@ -41,6 +42,7 @@ export default function homepage(props) {
           <h3 className="text-5xl">R${cadastro.saldo},00</h3>
         </div>
         <BarChart />
+        <RecentOrders />
         <div className="flex p-4 items-center flex-row justify-center">
           <div className="lg:col-span-2 col-span-1 bg-white flex w-full border p-4 rounded-lg ">
             <div className="flex flex-col w-full pb-4">
