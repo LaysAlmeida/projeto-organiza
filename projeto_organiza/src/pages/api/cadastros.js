@@ -7,9 +7,7 @@ var cadastros = [
       saldo: 5000,
       email:'example@com',
       entradas: [{valor:5600,data:'20/10/2022'}],
-      saidas: [{categoria:'farmácia',valor:500,data:'21/10/2022'},{categoria:'shopping',valor:100,data:'22/10/2022'}],
-      patrimonio: 'R$20.000',
-      genero: 'm'
+      saidas: [{categoria:'farmácia',valor:500,data:'21/10/2022'},{categoria:'shopping',valor:100,data:'22/10/2022'}]
     },
     {
       nome: 'Maria Santos',
@@ -19,9 +17,7 @@ var cadastros = [
       saldo: 400,
       email:'example2@com',
       entradas: [{valor:1000,data:'20/10/2022'}],
-      saidas: [{categoria:'farmácia',valor:500,data:'22/10/2022'},{categoria:'shopping',valor:100,data:'22/10/2022'}],
-      patrimonio: 'R$12.000',
-      genero: 'f'
+      saidas: [{categoria:'farmácia',valor:500,data:'22/10/2022'},{categoria:'shopping',valor:100,data:'22/10/2022'}]
     },
   ];
   
