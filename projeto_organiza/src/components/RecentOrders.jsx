@@ -1,5 +1,5 @@
 import React from 'react';
-import { data } from '@/pages/data/data.js';
+import { data } from '@/pages/api/data.js';
 import { FaShoppingBag } from 'react-icons/fa';
 
 const RecentOrders = () => {
