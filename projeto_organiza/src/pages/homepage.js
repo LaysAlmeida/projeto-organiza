@@ -33,12 +33,17 @@ export default function homepage(props) {
   return (
     <div className="bg-main">
       <Navbar />
-      <div className="grid md:grid-cols-2 gap-4 p-4 items-start justify-center text-white font-mukta  mt-12 ml-12">
-        <h1 className="text-5xl"> Olá {cadastro.nome}!</h1>
-        <h2 className="text-base font-medium"></h2>
-        <HChart />
-        <h3 className="text-5xl">Saldo atual: R${cadastro.saldo},00</h3>
-        <RecentOrders />
+      <div className="flex flex-col p-4 gap-4 text-white">
+        <div className="lg:col-span-2 col-span-1">
+          <div className="flex flex-col w-full pb-4 font-mukta">
+            <p className="text-3xl"> Olá {cadastro.nome}!</p>
+            <p className="text-3xl">Saldo atual: R${cadastro.saldo},00</p>
+          </div>
+          <div className="flex flex-row w-full p-4">
+            <HChart />    
+          </div>
+          <RecentOrders />
+        </div>
       </div>
     </div>
   )

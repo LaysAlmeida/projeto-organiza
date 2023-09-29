@@ -61,7 +61,7 @@ const HChart = () => {
     [])
     return (
         <>
-            <div className=" flex flex-row w-3/12 md:col-span-2 relative lg:h-[50vh] h-[60vh] a-auto p-4" >
+            <div className=" flex flex-row w-full md:col-span-2 lg:h-[50vh] h-[60vh] a-auto p-4" >
                 <Doughnut data={chartData} options={chartOptions} plugins={[plugins]}
                  />
             </div>
