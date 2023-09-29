@@ -17,7 +17,7 @@ const RecentOrders = () => {
             </div>
             <div className='pl-4'> 
               <p className='text-gray-800 font-bold'>{order.status}</p>
-              <p className='text-gray-800 font-bold'>${order.total}</p>
+              <p className='text-gray-800 font-bold'>R${order.total}</p>
               <p className='text-gray-400 text-sm'>{order.method}</p>
               <p className='text-gray-400 text-sm'>{order.name.first}</p>
             </div>

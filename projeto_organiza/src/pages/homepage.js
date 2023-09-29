@@ -40,7 +40,7 @@ export default function homepage(props) {
             <p className="text-xl font-mukta mt-4">Saldo atual: </p>
             <p className="text-3xl font-mukta">R${cadastro.saldo},00</p>
           </div>
-          <div className="flex flex-row w-full p-4">
+          <div className="flex flex-wrap w-full p-4">
             <HChart />
           </div>
           <RecentOrders />

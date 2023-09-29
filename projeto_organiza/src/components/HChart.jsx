@@ -17,8 +17,7 @@ const HChart = () => {
             labels: ['Despesas', 'Metas', 'Saldo Atual', 'Receitas'],
             datasets: [
                 {
-                    label: '# of Votes',
-                    data: [6, 6, 8, 12],
+                    data: [10, 10, 20, 60],
                     borderColor: [
                         'rgba(43, 135, 227, 1)',
                         'rgba(87, 208, 122, 1)',
@@ -47,7 +46,7 @@ const HChart = () => {
                 
                 title: {
                     display: true,
-                    text: 'Seu Patrimônio',
+                    text: 'Seu Patrimônio (Em %)',
                     color: 'rgba(255, 255, 255, 1)'
                 },
                 maintainAspectRatio: false,
