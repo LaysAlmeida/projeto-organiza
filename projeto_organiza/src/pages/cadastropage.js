@@ -62,7 +62,7 @@ const cadastropage = props =>{
 
 
     return(
-        <section class="bg-blue-800 dark:bg-gray-900 h-screen">
+        <section class="bg-main h-screen">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 md:flex-row">
             <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-white dark:text-gray-50">
                 <img class="w-10 h-30 mr-2" src="/icon.png" alt="logo"/>
