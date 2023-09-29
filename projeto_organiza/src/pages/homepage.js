@@ -40,7 +40,7 @@ export default function homepage(props) {
             <p className="text-3xl">Saldo atual: R${cadastro.saldo},00</p>
           </div>
           <div className="flex flex-row w-full p-4">
-            <HChart />    
+            <HChart />
           </div>
           <RecentOrders />
         </div>
