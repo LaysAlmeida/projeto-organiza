@@ -29,7 +29,7 @@ const BarChart = () => {
 
   useEffect(() => {
     setChartData({
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Jullho'],
       datasets: [
         {
           label: 'Imobiliaria',
@@ -58,15 +58,14 @@ const BarChart = () => {
           labels: {
             color: "white",
           },
-
           title: {
             display: true,
-            text: 'Últimas Despesas',
+            text: 'Despesas / Ganhos',
             color: 'white'
           },
           maintainAspectRatio: false,
-          responsive: true
-        }
+          responsive: true,
+        },
       },
 
       scales: {
@@ -84,7 +83,7 @@ const BarChart = () => {
 
   return (
     <>
-      <div className='w-full h-full md:col-span-2 static m-auto p-4 border rounded-lg bg-white'>
+      <div className='w-full h-full md:col-span-2 m-auto p-4 border rounded-lg bg-white'>
         <Bar data={chartData} options={chartOptions} />
       </div>
     </>

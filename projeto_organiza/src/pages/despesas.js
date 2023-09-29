@@ -9,7 +9,7 @@ const despesas = () => {
         <div className="bg-main">
             <Navbar />
             <Cards />
-            <div className="p-4 grid md:grid-cols-3 grid-cols-1 gap-4 text-white">
+            <div className="p-4 flex flex-col gap-4 text-white">
                 <BarChart />
                 <RecentOrders />
             </div>

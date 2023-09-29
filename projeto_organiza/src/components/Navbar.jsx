@@ -45,7 +45,7 @@ const Navbar = () => {
             </div>
             <div className={
                 menuOpen
-                    ? 'fixed left-0 top-0 w-[100vw] h-[50%] sm:hidden bg-[#ecf0f3] p-10 ease-in duration-500 text-[#000000]'
+                    ? 'fixed left-0 top-0 w-[100vw] h-[55%] sm:hidden bg-[#ecf0f3] p-10 ease-in duration-500 text-[#000000]'
                     : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
             }
             >
@@ -87,16 +87,6 @@ const Navbar = () => {
                     <AiOutlineTwitter size={30} className="cursor-pointer" />
                     <AiOutlineFacebook size={30} className="cursor-pointer" />
                 </div>
-                <Link href='/'>
-                    <Image
-                        src={Logo}
-                        alt='Logo'
-                        width='65'
-                        height='45'
-                        className='fixed cursor-pointer pt-6 ml-14'
-                        priority
-                    />
-                </Link>
             </div>
         </nav>
 

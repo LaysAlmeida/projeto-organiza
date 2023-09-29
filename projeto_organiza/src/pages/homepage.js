@@ -36,8 +36,9 @@ export default function homepage(props) {
       <div className="flex flex-col p-4 gap-4 text-white">
         <div className="lg:col-span-2 col-span-1">
           <div className="flex flex-col w-full pb-4 font-mukta">
-            <p className="text-3xl"> Olá {cadastro.nome}!</p>
-            <p className="text-3xl">Saldo atual: R${cadastro.saldo},00</p>
+            <p className="text-3xl font-mukta"> Olá {cadastro.nome}!</p>
+            <p className="text-xl font-mukta mt-4">Saldo atual: </p>
+            <p className="text-3xl font-mukta">R${cadastro.saldo},00</p>
           </div>
           <div className="flex flex-row w-full p-4">
             <HChart />
