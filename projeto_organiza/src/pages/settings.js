@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
 
-const Settings = () =>{
-    return(
+const Settings = () => {
+    return (
         <div>
-            <Navbar/>
+            <Navbar />
         </div>
     )
 
